@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>YoGa Design</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
+	<link rel="shortcut icon" type="image/png" href="http://www.w3newbie.com/wp-content/uploads/yoga_favicon.png">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<!-- Start Header -->
+		<header>
+			<div class="callout">
+			 	<h1>&#9742; 555.525.5005</h1>
+			 	<p>530 Street Road, Solana Beach, CA 92075</p>
+			</div>
+			<div id="logo">
+				<a href="index.html"><img src="http://www.w3newbie.com/wp-content/uploads/yoga_logo.png"></a>
+			</div>
+		</header>
+		<!-- End Header -->
+		<div class="clearfix"></div>
+		<!-- Start Nav and Banner -->
+		<div class="banner-wrapper">
+		<div class="navigation">
+			<nav>
+				<a href="#" id="menu-icon"></a>
+				<ul>
+					<li><a href="index.html" class="active">Home</a></li>
+					<li><a href="index.html">About Us</a></li>
+					<li><a href="index.html">Classes</a></li>
+					<li><a href="index.html">Testimonials</a></li>
+					<li><a href="index.html">Contact</a></li>
+				</ul>
+		
+			</nav>
+		</div>
+			<section>
+				<div class="slideshow-container">
+					<ul>
+						<li class="mySlide fade"><img src="images/yoga_girl.png"></li>
+						<li class="mySlide fade"><img src="images/yoga_tree.png"></li>
+						<li class="mySlide fade"><img src="images/yoga_beach.png"></li>
+					</ul>
+					<a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlide(1)">&#10095;</a>
+				</div>
+				<div class="line-dot">
+					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(2)"></span>
+					<span class="dot" onclick="currentSlide(3)"></span>
+				</div>
+			</section>
+
+			<script>
+
+				var slideIndexAuto = 0;
+				slideShowAuto();	
+
+				function slideShowAuto() {
+					var i;
+					var slides = document.getElementsByClassName("mySlide");
+					var dots = document.getElementsByClassName("dot");
+					
+					
+					for(i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					slideIndexAuto++;
+					if (slideIndexAuto > slides.length) {
+						slideIndexAuto = 1;
+					}
+					for(i = 0; i< dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active-slider", "");
+					}
+					slides[slideIndexAuto-1].style.display = "block";
+					dots[slideIndexAuto-1].className += " active-slider";
+					setTimeout(slideShowAuto, 4000);
+				}
+
+				
+				var slideIndex = 1;
+				slideShow(slideIndex);
+
+				function plusSlide(n) {
+					slideShow(slideIndex += n);
+				}
+
+				function currentSlide(n) {
+					slideShow(slideIndex = n);
+				}
+
+				function slideShow(n) {
+					var i;
+					var slides = document.getElementsByClassName("mySlide");
+					var dots = document.getElementsByClassName("dot");
+					if (n > slides.length) {
+						slideIndex = 1;
+					}
+					if (n < 1) {
+						slideIndex = slides.length;
+					}
+					for(i = 0; i < slides.length; i++) {
+						slides[i].style.display = "none";
+					}
+					
+					for(i = 0; i< dots.length; i++) {
+						dots[i].className = dots[i].className.replace(" active-slider", "");
+					}
+					slides[slideIndex-1].style.display = "block";
+					dots[slideIndex-1].className += " active-slider";
+					
+				}
+			</script>
+		
+
+		</div>
+		<!-- End Nav and Banner -->
+
+		<!-- Start Section Icon -->
+		<section class="one-third">
+			<td><i class="fa fa-connectdevelop"></i></td>
+			<h1>Be a Visionary</h1>
+			<p>Expand your horizons with Dharma Yoga, join us and become a visionary.</p>
+		</section>
+		<section class="one-third">
+			<td><i class="fa fa-skyatlas"></i></td>
+			<h1>Get Focused</h1>
+			<p>Train your body, mind and spiret to focus on bettering yourself time and time again.</p>
+		</section>
+		<section class='one-third'>
+			<td><i class="fa fa-globe"></i></td>
+			<h1>Be Worldly</h1>
+			<p >Learn cultures and teachings from Yogi's around the world, be one with the earth.</p>
+		</section>
+		<!-- End Section Icon -->
+
+		<div class="clearfix"></div>
+
+		<h2 class="welcome">Welcome to Dharma yoga, connect with us</h2>
+		<!-- Start article and aside -->
+		<article class="left-col">
+			<p>Are you ready to take your mind, body and spiritual being to the next level and advance to horizons you thought may never be possible for yourself?</p>
+			<br>
+			<p>We at Dharma Yogo have the experience and wisdom to improve upon the skills and englishtenment of yoga enthusiasts no matter how long or little you have been active and procticing. Our goal is to establish a long lasting connection with our clients and class participants who we'd like to navigate through the ups and downs life brings with a spiritual ease.</p>
+
+			<h1>Advance to the next level</h1>
+		</article>
+
+		<aside class="sidebar">
+			<img src="http://www.w3newbie.com/wp-content/uploads/yoga_mountains.png">
+		</aside>
+
+		<div class="clearfix"></div>
+		<!-- End article and aside -->
+
+		<section class="one-third">
+			<h3>Ourdoor stretching</h3>
+			<img src="http://www.w3newbie.com/wp-content/uploads/yoga_stretch.png">
+			<p>Enjoy nature and take in the beautiful surroundings with our yogis, stretching
+			outdoors with our state of the art yogo mats.</p>
+		</section>
+
+		<section class="one-third">
+			<h3>Yoga Classes</h3>
+			<img src="http://www.w3newbie.com/wp-content/uploads/yoga_class.png">
+			<p>See our classes page for a full list of our yoga classes, our instructors will work with you to find you the class that most meets your goals.</p>
+		</section>
+
+		<section class="one-third">
+			<h3>Private Sessions</h3>
+			<img src="http://www.w3newbie.com/wp-content/uploads/yoga_private.png">
+			<p>Schedule a private session with one of our experenced yogis who will join you for a personal yoga experience at the destination o your choice.</p>
+		</section>
+
+		<div class="clearfix"></div>
+		<!-- Start Section Our classes -->
+		<section class="page-callout">
+			<p class="callout-text">Looking for a class you don't see here? Check out our classes page!</p>
+			<div class="button-holder">
+				<a href="classes.html" class="btn">Our Classes</a>
+			</div>
+		</section>
+		<!-- Start Section Our classes -->
+		<div class="clearfix"></div>
+		<!-- Start Footer -->
+		<footer>
+			<div class="one-third">
+				<h3>Contact us</h3>
+				<br>
+				<p class="footer-contact">	Dharma Yoga<br>
+					<strong>555-525-5005</strong><br>
+					<br>
+					530 Street Road<br>
+					Solana Beach, CA 92075<br>
+					yogi@dramayoga.com<br>
+				</p>
+				<ul class="social">
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+				</ul>
+			</div>
+
+			<div class="one-third">
+				<h3>Our Location</h3>
+				<br>
+				<div class="google-maps">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26770.465093947587!2d-117.2746217306011!3d32.995650771957976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc092f948b254b%3A0x8c2cdf5d612c9f56!2sSolana+Beach%2C+California+92075!5e0!3m2!1svi!2s!4v1500455084895" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="one-third">
+				<h3>Our Philosophy</h3>
+				<br>
+				<p>We at Dharma Yoga enjoy a philosophy that satisfies both the most modern and ancient practicing of true Dharmic Yogi's</p>
+
+				<p>"Wisdom is knowing we are all one. Love is what it feels like and compassion is what it acts like."</p>
+				<br>
+				<p>-Ethan Walker!!!</p>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<p class="copy">&copy; Dharma Yoga, 2015.</p>
+		</footer>
+
+
+
+		<!-- End Footer -->
+
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</body>
+</html>
